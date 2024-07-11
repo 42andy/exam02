@@ -7,30 +7,30 @@ int	ft_abs(int x)
 	return (x);
 }
 
-int	*ft_range(int start, int end)
+int	*ft_rrange(int start, int end)
 {
 	int	i;
 	int	*tab;
 
 	i = 0;
-	tab = (int *)malloc(sizeof(int) * (ft_abs(start - end) + 1));
+	tab = (int *)malloc(sizeof(int) * (ft_abs(end - start) + 1));
 	if (!tab)
 		return (NULL);
-	if (start < end)
+	if (end < start)
 	{
-		while (start <= end)
+		while (end <= start)
 		{
-			tab[i] = start;
-			start++;
+			tab[i] = end;
+			end++;
 			i++;
 		}
 	}
-	else if (start > end)
+	else if (end > start)
 	{
-		while (start >= end)
+		while (end >= start)
 		{
-			tab[i] = start;
-			start--;
+			tab[i] = end;
+			end--;
 			i++;
 		}
 	}
@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 	int	*arr;
 
 	arr_len = ft_abs(atoi(argv[2]) - atoi(argv[1]));
-	arr = ft_range(atoi(argv[1]), atoi(argv[2]));
+	arr = ft_rrange(atoi(argv[1]), atoi(argv[2]));
 	for (int i = 0; i <= arr_len; i += 1)
 		printf("%d\n", arr[i]);
 	free(arr);
