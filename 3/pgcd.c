@@ -8,11 +8,11 @@ int	main(int argc, char *argv[])
 	int	nbr2;
 	int	n;
 
-	nbr1 = atoi(argv[1]);
-	nbr2 = atoi(argv[2]);
-	n = nbr1;
 	if (argc == 3)
 	{
+		nbr1 = atoi(argv[1]);
+		nbr2 = atoi(argv[2]);
+		n = nbr1;
 		while (n > 0)
 		{
 			if (nbr1 % n == 0 && nbr2 % n == 0)
