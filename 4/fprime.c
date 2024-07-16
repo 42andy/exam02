@@ -5,7 +5,7 @@ int	main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
-		int 	nb;
+		int	nb;
 		int	prime;
 
 		nb = atoi(argv[1]);
