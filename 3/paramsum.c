@@ -8,7 +8,6 @@ void	ft_putnbr(int nb)
 	if (nb >= 10)
 		ft_putnbr(nb / 10);
 	write(1, &base[nb % 10], 1);
-	return ;
 }
 
 int	main(int argc, char **argv)
@@ -16,5 +15,4 @@ int	main(int argc, char **argv)
 	(void)argv;
 	ft_putnbr(argc - 1);
 	write(1, "\n", 1);
-	return (0);
 }
