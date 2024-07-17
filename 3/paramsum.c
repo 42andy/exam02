@@ -4,7 +4,7 @@ void	ft_putnbr(int nb)
 {
 	char	*base;
 
-	*base = "0123456789";
+	base = "0123456789";
 	if (nb >= 10)
 		ft_putnbr(nb / 10);
 	write(1, &base[nb % 10], 1);
