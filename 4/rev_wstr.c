@@ -14,8 +14,6 @@ int	main(int argc, char *argv[])
 		i--;
 		while (i >= 0)
 		{
-			if (i < 0)
-				break ;
 			end = i;
 			while (i >= 0 && argv[1][i] != 32)
 				i--;

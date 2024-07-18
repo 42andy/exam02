@@ -1,4 +1,4 @@
-int convert(char c)
+int	convert(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - 48);
@@ -10,12 +10,14 @@ int convert(char c)
 		return (-1);
 }
 
-int ft_atoi_base(const char *str, int str_base)
+int	ft_atoi_base(const char *str, int str_base)
 {
-	int result = 0;
-	int sign = 1;
-	int digit;
+	int	result;
+	int	sign;
+	int	digit;
 
+	result = 0;
+	sign = 1;
 	if (str_base < 2 || str_base > 16)
 		return (0);
 	if (*str == '-')
