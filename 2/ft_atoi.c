@@ -25,8 +25,9 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
+/*
 int	main()
 {
 	printf("%d", ft_atoi("--233"));
 }
+*/
